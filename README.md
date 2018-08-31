@@ -5,6 +5,16 @@ My GitHub pages
 
 ## Reminders for my self
 
-Locally test it with:
+Install properly
+
+    gem install bundler # Sudo may be needed
+    bundle install
+    
+Updates from time to time
+
+    gem outdated
+    bundle update
+
+Locally test it
 
     bundle exec jekyll serve
