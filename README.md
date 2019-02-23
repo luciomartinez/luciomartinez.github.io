@@ -7,13 +7,13 @@ My GitHub pages
 
 Install properly
 
-    gem install bundler # Sudo may be needed
+    gem install bundler # sudo may be needed
     bundle install
     
 Updates from time to time
 
     gem outdated
-    bundle update
+    bundle update # will request for sudo password
 
 Locally test it
 
