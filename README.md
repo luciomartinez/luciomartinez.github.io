@@ -8,7 +8,7 @@ My GitHub pages
 Install properly
 
     gem install bundler # sudo may be needed
-    bundle install
+    bundle install # will request for sudo password
     
 Updates from time to time
 
