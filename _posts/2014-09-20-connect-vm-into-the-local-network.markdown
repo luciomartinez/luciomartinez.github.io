@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Connect a VM into a local network"
+title:  "Connect a VM Into the Local Network"
 date:   2014-09-20 20:31:00 -0300
-categories: command-line terminal
+categories: vm
 ---
 A Virtual Machine (VM) can be connected into the local network as another machine connected to the router. To do it, I will mention the steps for VirtualBox but the same can be achieved for other products.
 
