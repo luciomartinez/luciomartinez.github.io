@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How to send POST variables using command line"
+title:  "How to Send POST Variables Using Command Line"
 date:   2013-09-17 19:41:00 -0300
-categories: command-line terminal
+categories: cli
 ---
 When you are developing using PHP or another technology, you can use the POST variables to send values from the *client* to the *server* page.
 
