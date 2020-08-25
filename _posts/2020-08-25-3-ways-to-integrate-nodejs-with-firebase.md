@@ -220,4 +220,4 @@ Integrating your application into this platform can be very handy for profession
 Let me know your thoughts through my [Twitter account](https://twitter.com/delucioux). I'm looking forward to hearing from you!
 
 ## References
- <b name="reference1">[1]</b> [^](#note1) How to host nodeJS project to firebase? https://stackoverflow.com/a/45538122/1505348
+ <b name="reference1">[1]</b> [^](#note1) [How to host nodeJS project to firebase?](https://stackoverflow.com/a/45538122/1505348)
