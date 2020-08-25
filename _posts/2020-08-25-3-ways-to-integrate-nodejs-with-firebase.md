@@ -5,21 +5,22 @@ date:   2020-08-25 20:48:00 +0200
 categories: cloud
 ---
 # Deliver a Node.JS App With Firebase
-Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup id="note1">[1](#note1)</sup>
-[Here](https://youtu.be/LOeioOKUKI8) you'll find demo that develops two Node.JS endpoints running with Firebase.
+Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup id="note1">[1](#reference1)</sup>
+[Here](https://youtu.be/LOeioOKUKI8) you'll find a demo that develops two Node.JS endpoints running with Firebase.
 Getting from two endpoints into a full Node.JS app will become more complex requiring a few hours of understanding, debugging and more trying to get it working.
 
-Hopefully this article will save someone else's time on that process since you may find the description of the issue, the analysis and the development of Node.JS with Firebase on three different ways for a successful deployment. 
+Hopefully, this article will save other people time on that process since you may find the description of the main issue,
+the analysis and the development of Node.JS with Firebase on three different ways for a successful deployment. 
 
 ## Things to Consider
-Before talking about the issue let's define two things:
+Before talking about the main issue let's define two things:
  - Node.JS app structure
  - Cloud Functions integration
  
 First, the Node.JS app structure.
 
 ### Node.JS App Structure
-The structure of a regular Node.JS app looks like this:
+The structure of a regular Node.JS app looks something like this:
 
 ```
  > bin/
@@ -53,7 +54,7 @@ const app = require('../app');
 exports.app = functions.https.onRequest(app);
 ```
 
-The bullet proof testing comes at deploy time by running the `firebase deploy` command.
+The smoke testing comes at deployment time by executing the `firebase deploy` command.
 If that'd work then this post won't exist and so now is time to talk about the issue.
 
 ## Issue
@@ -61,18 +62,19 @@ The Cloud Functions deployment fails with the following message:
 
     Cannot find module '../app'
 
-Cloud Functions uploads `functions/` directory content when it deploys and so there was no Node.JS app inside it.
+Cloud Functions uploads the content of the `functions/` directory on deployment and so there was no Node.JS app inside it.
 That's where our journey begins since there are three ways to solve it.
 
 ## Solutions
-There are three ways to solve it. Each of them is defined with its "pros-and-cons" making easier the election in different scenarios.
+There are three ways to solve it.
+Each of them is defined with its "pros-and-cons" making the election easier for different scenarios.
 
 NOTE: all solutions has a common requirement and is that the Firebase project must be configured with [Pay as you go](https://firebase.google.com/pricing).
 It does not mean that there's payment requirements since the free quota is large enough for testing.
 However, it requires a billing account to be in place.
 Read more at the [Quotas and limits](https://firebase.google.com/docs/functions/quotas) page. 
 
-### App Inside Functions
+### Solution A: App Inside Functions
 With this solution the project's structure will change to the next shape:
 ```
  > bin/
@@ -120,7 +122,7 @@ With this solution the project's structure will change to the next shape:
  Looking at the project's root level there'll be no indicator of a Node.JS app.
  Instead, an app that only supports Cloud Functions will be highlighted.
 
-### Functions at Root
+### Solution B: Functions at Root
 With this solution the project's structure will change to the next shape:
 ```
  > bin/
@@ -162,7 +164,7 @@ With this solution the project's structure will change to the next shape:
  - Ends up with two entry points at the root level (`app.js` and `index.js`).
  - A single node version for both, local and Cloud Functions (`package.json@engines`).
 
-### Mirror App Inside Functions
+### Solution C: Mirror App Inside Functions
 With this solution the project's structure will change to the next shape:
 ```
  > bin/
