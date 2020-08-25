@@ -2,7 +2,7 @@
 layout: post
 title:  3 Ways To Integrate Node.JS With Firebase
 date:   2020-08-25 20:48:00 +0200
-categories: firebase
+categories: cloud
 ---
 # Deliver a Node.JS App With Firebase
 Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup id="note1">[1](#note1)</sup>
