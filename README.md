@@ -1,20 +1,20 @@
-My GitHub pages
-===============
+[luciomartinez.github.com](https://luciomartinez.github.io)
+=
 
 > The nearest thing to my personal website
 
-## Reminders for my self
+### Reminders for myself
 
-Install properly
+Install:
 
-    gem install bundler # sudo may be needed
-    bundle install # will request for sudo password
+    gem install bundler # requires sudo
+    bundle install # requires sudo
     
-Updates from time to time
+Update dependencies:
 
     gem outdated
-    bundle update # will request for sudo password
+    bundle update # requires sudo
 
-Locally test it
+Serve locally:
 
     bundle exec jekyll serve
