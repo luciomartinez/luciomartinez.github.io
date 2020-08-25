@@ -5,7 +5,7 @@ date:   2020-08-25 20:48:00 +0200
 categories: cloud
 ---
 # Deliver a Node.JS App With Firebase
-Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup id="note1">[1](#reference1)</sup>
+Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup>[1](#reference1)</sup>
 [Here](https://youtu.be/LOeioOKUKI8) you'll find a demo that develops two Node.JS endpoints running with Firebase.
 Getting from two endpoints into a full Node.JS app will become more complex requiring a few hours of understanding, debugging and more trying to get it working.
 
@@ -220,4 +220,4 @@ Integrating your application into this platform can be very handy for profession
 Let me know your thoughts through my [Twitter account](https://twitter.com/delucioux). I'm looking forward to hearing from you!
 
 ## References
- <b name="reference1">[1]</b> [^](#note1) [How to host nodeJS project to firebase?](https://stackoverflow.com/a/45538122/1505348)
+ <b id="reference1">[1]</b> [How to host nodeJS project to firebase?](https://stackoverflow.com/a/45538122/1505348)
