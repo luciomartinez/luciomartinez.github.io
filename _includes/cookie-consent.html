@@ -1,0 +1,72 @@
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+  function GAManager() {
+    let isInitialized = false;
+
+    this.enable = function() {
+      initiGAIfNeeded();
+      window['ga-disable-GA_MEASUREMENT_ID'] = false;
+    };
+
+    this.disable = function() {
+      window['ga-disable-GA_MEASUREMENT_ID'] = true;
+    };
+
+    function initiGAIfNeeded() {
+      if (!isInitialized) {
+        initGA();
+      }
+    }
+
+    function initGA() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126456490-1');
+
+      isInitialized = true;
+    }
+  }
+
+  const gaManager = new GAManager();
+
+  window.cookieconsent.initialise({
+    type: 'opt-in',
+    palette: {
+      popup: {
+        background: '#edeff5',
+        text: '#838391'
+      },
+      button: {
+        background: '#4b81e8'
+      }
+    },
+    onInitialise: function () {
+      const type = this.options.type;
+      const didConsent = this.hasConsented();
+      if (type === 'opt-in' && didConsent) {
+        gaManager.enable();
+      } else if (type === 'opt-out' && !didConsent) {
+        gaManager.disable();
+      }
+    },
+    onStatusChange: function() {
+      const type = this.options.type;
+      const didConsent = this.hasConsented();
+      if (type === 'opt-in' && didConsent) {
+        gaManager.enable();
+      } else if (type === 'opt-out' && !didConsent) {
+        gaManager.disable();
+      }
+    },
+    onRevokeChoice: function() {
+      const type = this.options.type;
+      if (type === 'opt-in') {
+        gaManager.disable();
+      } else if (type === 'opt-out') {
+        gaManager.enable();
+      }
+    }
+  });
+</script>
