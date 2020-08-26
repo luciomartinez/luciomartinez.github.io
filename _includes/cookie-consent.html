@@ -3,6 +3,21 @@
   function GAManager() {
     let isInitialized = false;
 
+    this.enable = function() {
+      initiGAIfNeeded();
+      window['ga-disable-GA_MEASUREMENT_ID'] = false;
+    };
+
+    this.disable = function() {
+      window['ga-disable-GA_MEASUREMENT_ID'] = true;
+    };
+
+    function initiGAIfNeeded() {
+      if (!isInitialized) {
+        initGA();
+      }
+    }
+
     function initGA() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -12,21 +27,9 @@
 
       isInitialized = true;
     }
-
-    this.enableTracking = function() {
-      if (!isInitialized) {
-        initGA();
-      }
-
-      window['ga-disable-GA_MEASUREMENT_ID'] = false;
-    };
-
-    this.disableTracking = function() {
-      window['ga-disable-GA_MEASUREMENT_ID'] = true;
-    };
   }
 
-  const manage = new GAManager();
+  const gaManager = new GAManager();
 
   window.cookieconsent.initialise({
     type: 'opt-in',
@@ -43,26 +46,26 @@
       const type = this.options.type;
       const didConsent = this.hasConsented();
       if (type === 'opt-in' && didConsent) {
-        manage.enableTracking();
+        gaManager.enable();
       } else if (type === 'opt-out' && !didConsent) {
-        manage.disableTracking();
+        gaManager.disable();
       }
     },
     onStatusChange: function() {
       const type = this.options.type;
       const didConsent = this.hasConsented();
       if (type === 'opt-in' && didConsent) {
-        manage.enableTracking();
+        gaManager.enable();
       } else if (type === 'opt-out' && !didConsent) {
-        manage.disableTracking();
+        gaManager.disable();
       }
     },
     onRevokeChoice: function() {
       const type = this.options.type;
       if (type === 'opt-in') {
-        manage.disableTracking();
+        gaManager.disable();
       } else if (type === 'opt-out') {
-        manage.enableTracking();
+        gaManager.enable();
       }
     }
   });
