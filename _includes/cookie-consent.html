@@ -1,0 +1,69 @@
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+  function GAManager() {
+    let isInitialized = false;
+
+    function initGA() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126456490-1');
+
+      isInitialized = true;
+    }
+
+    this.enableTracking = function() {
+      if (!isInitialized) {
+        initGA();
+      }
+
+      window['ga-disable-GA_MEASUREMENT_ID'] = false;
+    };
+
+    this.disableTracking = function() {
+      window['ga-disable-GA_MEASUREMENT_ID'] = true;
+    };
+  }
+
+  const manage = new GAManager();
+
+  window.cookieconsent.initialise({
+    type: 'opt-in',
+    palette: {
+      popup: {
+        background: '#edeff5',
+        text: '#838391'
+      },
+      button: {
+        background: '#4b81e8'
+      }
+    },
+    onInitialise: function () {
+      const type = this.options.type;
+      const didConsent = this.hasConsented();
+      if (type === 'opt-in' && didConsent) {
+        manage.enableTracking();
+      } else if (type === 'opt-out' && !didConsent) {
+        manage.disableTracking();
+      }
+    },
+    onStatusChange: function() {
+      const type = this.options.type;
+      const didConsent = this.hasConsented();
+      if (type === 'opt-in' && didConsent) {
+        manage.enableTracking();
+      } else if (type === 'opt-out' && !didConsent) {
+        manage.disableTracking();
+      }
+    },
+    onRevokeChoice: function() {
+      const type = this.options.type;
+      if (type === 'opt-in') {
+        manage.disableTracking();
+      } else if (type === 'opt-out') {
+        manage.enableTracking();
+      }
+    }
+  });
+</script>
