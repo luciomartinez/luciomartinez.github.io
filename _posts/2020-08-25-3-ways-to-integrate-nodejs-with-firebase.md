@@ -1,16 +1,20 @@
 ---
 layout: post
-title:  3 Ways To Integrate Node.JS With Firebase
+title:  3 Ways To Integrate a Node.JS App With Firebase
 date:   2020-08-25 20:48:00 +0200
 categories: cloud
 ---
 # Deliver a Node.JS App With Firebase
-Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup>[1](#reference1)</sup>
-[Here](https://youtu.be/LOeioOKUKI8) you'll find a demo that develops two Node.JS endpoints running with Firebase.
-Getting from two endpoints into a full Node.JS app will become more complex requiring a few hours of understanding, debugging and more trying to get it working.
+Since 2017 is possible to integrate [Node.JS](https://nodejs.org) with [Firebase](https://firebase.google.com).<sup>[1](#reference1)</sup>
+There's an official [demonstration](https://youtu.be/LOeioOKUKI8) that develops two Node.JS endpoints.
+There's a [tutorial](https://indepth.dev/building-an-api-with-firebase/) building an API from scratch.
+Now, what happens when an already developed Node.JS app needs to be integrated with Firebase?
+There will be an issue, and the previous articles won't help.
+Getting from two endpoints into a full Node.JS app will become more complex
+requiring a few hours of understanding, debugging and more trying to get it working.
 
 Hopefully, this article will save other people time on that process since you may find the description of the main issue,
-the analysis and the development of Node.JS with Firebase on three different ways for a successful deployment. 
+the analysis and the development of a Node.JS app with Firebase on three different ways for a successful deployment. 
 
 ## Things to Consider
 Before talking about the main issue let's define two things:
