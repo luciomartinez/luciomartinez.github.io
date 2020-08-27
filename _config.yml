@@ -17,3 +17,7 @@ github_username:  luciomartinez
 
 # Build settings
 markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-sitemap
