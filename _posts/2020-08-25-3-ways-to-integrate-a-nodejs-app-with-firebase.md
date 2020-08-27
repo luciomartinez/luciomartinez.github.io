@@ -76,7 +76,7 @@ Each of them is defined with its "pros-and-cons" making the election easier for 
 NOTE: all solutions has a common requirement and is that the Firebase project must be configured with [Pay as you go](https://firebase.google.com/pricing).
 It does not mean that there's payment requirements since the free quota is large enough for testing.
 However, it requires a billing account to be in place.
-Read more at the [Quotas and limits](https://firebase.google.com/docs/functions/quotas) page. 
+Read more at the [Quotas and limits](https://firebase.google.com/docs/functions/quotas) page.
 
 ### Solution A: App Inside Functions
 With this solution the project's structure will change to the next shape:
@@ -126,49 +126,7 @@ With this solution the project's structure will change to the next shape:
  Looking at the project's root level there'll be no indicator of a Node.JS app.
  Instead, an app that only supports Cloud Functions will be highlighted.
 
-### Solution B: Functions at Root
-With this solution the project's structure will change to the next shape:
-```
- > bin/
-   > www.js
- > src/
- > test/
- > app.js
- > package.json
-``` 
-
-#### Steps
-
- 1. Move `functions/index.js` to the root level
- 2. Update the app's path in `index.js`
-
-         -- const app = require('../app');
-         ++ const app = require('./app');
-
- 3. Carefully integrate `functions/package.json` with `package.json`
- It consists of, mainly, the next sub-steps:
-    1. Merging `scripts`
-    2. Merging `engines`
-    3. Merging `dependencies`
-    4. Merging `devDependencies`  
- Real example: ![git diff](https://i.imgur.com/ftT84Gh.png)
- 4. Remove `functions/`
- 5. Update Cloud Functions path's configuration from the `firebase.json` file.
-
-        "functions": {
-          "source": "."
-        }
-
-#### Pros
- - It also works!
- - No duplication of NPM packages.
-
-#### Cons
- - Is tedious as heck.
- - Ends up with two entry points at the root level (`app.js` and `index.js`).
- - A single node version for both, local and Cloud Functions (`package.json@engines`).
-
-### Solution C: Mirror App Inside Functions
+### Solution B: Mirror App Inside Functions
 With this solution the project's structure will change to the next shape:
 ```
  > bin/
@@ -212,6 +170,48 @@ With this solution the project's structure will change to the next shape:
 
 #### Cons
  - Needs to keep track of dependencies and make sure to install them twice.
+
+### Solution C: Functions at Root
+With this solution the project's structure will change to the next shape:
+```
+ > bin/
+   > www.js
+ > src/
+ > test/
+ > app.js
+ > package.json
+``` 
+
+#### Steps
+
+ 1. Move `functions/index.js` to the root level
+ 2. Update the app's path in `index.js`
+
+         -- const app = require('../app');
+         ++ const app = require('./app');
+
+ 3. Carefully integrate `functions/package.json` with `package.json`
+ It consists of, mainly, the next sub-steps:
+    1. Merging `scripts`
+    2. Merging `engines`
+    3. Merging `dependencies`
+    4. Merging `devDependencies`  
+ Real example: ![git diff](https://i.imgur.com/ftT84Gh.png)
+ 4. Remove `functions/`
+ 5. Update Cloud Functions path's configuration from the `firebase.json` file.
+
+        "functions": {
+          "source": "."
+        }
+
+#### Pros
+ - It also works!
+ - No duplication of NPM packages.
+
+#### Cons
+ - Is tedious as heck.
+ - Ends up with two entry points at the root level (`app.js` and `index.js`).
+ - A single node version for both, local and Cloud Functions (`package.json@engines`).
 
 ## Conclusion
 Is worth to give it a shot and deploy a Node.JS app via Firebase.
