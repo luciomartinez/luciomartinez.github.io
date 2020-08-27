@@ -18,11 +18,11 @@ There's a link to either the cookie policy or to learn more about what cookies a
 Interaction: "OK"
 
 __Allow to opt-in__
-Cookies are enabled by default and visitors are allowed to enable them.
+Disable cookies by default and allow visitors to enable them.
 
 Interaction: "OK" / "Decline"
 
-Now that all the approaches are clear we can continue with their development.
+All the approaches are clear now, and we can continue with their development.
 
 # Development
 Start with the basic warning and move into an advanced opt-in approach.
@@ -205,8 +205,17 @@ Then, it defines three new properties in the plugin's options:
 All of this are callbacks which react to user interactions. eg. user clicks on "Allow cookies"
 Each callback is then relying on the GA manager to make sure according to the action's intention it enables/disables cookies. 
 
-# Conclusion
+After a longer implementation, the cookie consent should now look similar to the next one.
+
+![cookie consent implemented](https://pbs.twimg.com/media/Ega4GsdXsAEKWrz?format=jpg&name=medium)
+
+# Conclusions
 Talk about EU and maybe statistics.
+ - Open source is awesome! You don't need to spend time building tools which are built already.
+ - Comply with GDPR turns out to be fairly easy
+ - Advanced options can be grant spending a bit more of timing but still not that bad
+
+Disclaimer: do not take legal advices from this article which covers only technical development.
 
 # Feedback
 copy/paste from previous post.
