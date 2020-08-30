@@ -119,12 +119,56 @@ With this solution the project's structure will change to the next shape:
  - It works!
 
 #### Cons
- - Double installation of dependencies.
- In order to make app work locally they must be installed at `package.json`.
- To make it also work for Cloud Functions they must be installed at `functions/package.json`. 
+ - Code coupled with hosting solution.
+ In case we want to switch from Firebase into another solution will be a nightmare.
  - Loss of classic Node.JS app structure.
  Looking at the project's root level there'll be no indicator of a Node.JS app.
  Instead, an app that only supports Cloud Functions will be highlighted.
+ - Double installation of dependencies.
+ In order to make app work locally they must be installed at `package.json`.
+ To make it also work for Cloud Functions they must be installed at `functions/package.json`. 
+
+### Solution B: Functions at Root
+With this solution the project's structure will change to the next shape:
+```
+ > bin/
+   > www.js
+ > src/
+ > test/
+ > app.js
+ > package.json
+``` 
+
+#### Steps
+
+ 1. Move `functions/index.js` to the root level
+ 2. Update the app's path in `index.js`
+
+         -- const app = require('../app');
+         ++ const app = require('./app');
+
+ 3. Carefully integrate `functions/package.json` with `package.json`
+ It consists of, mainly, the next sub-steps:
+    1. Merging `scripts`
+    2. Merging `engines`
+    3. Merging `dependencies`
+    4. Merging `devDependencies`  
+ Real example: ![git diff](https://i.imgur.com/ftT84Gh.png)
+ 4. Remove `functions/`
+ 5. Update Cloud Functions path's configuration from the `firebase.json` file.
+
+        "functions": {
+          "source": "."
+        }
+
+#### Pros
+ - It also works!
+ - No duplication of NPM packages.
+
+#### Cons
+ - Is tedious as heck.
+ - Ends up with two entry points at the root level (`app.js` and `index.js`).
+ - A single node version for both, local and Cloud Functions (`package.json@engines`).
 
 ### Solution B: Mirror App Inside Functions
 With this solution the project's structure will change to the next shape:
@@ -167,51 +211,16 @@ With this solution the project's structure will change to the next shape:
  - It works too!
  - Original app structure is almost untouched. The Node.JS app continue to look exactly as expected.
  - Same code tested locally will be deployed automatically on the Cloud Functions.
+ - Migrating from Firebase into another solution will be as simply as removing Cloud Functions related files and enable the new solution
 
 #### Cons
  - Needs to keep track of dependencies and make sure to install them twice.
-
-### Solution C: Functions at Root
-With this solution the project's structure will change to the next shape:
-```
- > bin/
-   > www.js
- > src/
- > test/
- > app.js
- > package.json
-``` 
-
-#### Steps
-
- 1. Move `functions/index.js` to the root level
- 2. Update the app's path in `index.js`
-
-         -- const app = require('../app');
-         ++ const app = require('./app');
-
- 3. Carefully integrate `functions/package.json` with `package.json`
- It consists of, mainly, the next sub-steps:
-    1. Merging `scripts`
-    2. Merging `engines`
-    3. Merging `dependencies`
-    4. Merging `devDependencies`  
- Real example: ![git diff](https://i.imgur.com/ftT84Gh.png)
- 4. Remove `functions/`
- 5. Update Cloud Functions path's configuration from the `firebase.json` file.
-
-        "functions": {
-          "source": "."
-        }
-
-#### Pros
- - It also works!
- - No duplication of NPM packages.
-
-#### Cons
- - Is tedious as heck.
- - Ends up with two entry points at the root level (`app.js` and `index.js`).
- - A single node version for both, local and Cloud Functions (`package.json@engines`).
+ 
+These were a description of the three ways that I've found to integrate a Node.JS app into Firebase.
+Which one is the right one depends on the project and its requirements.
+In my experience, solution C has been the best option.
+Anyways, it might be that any of the other solutions could fit better for a different project.
+The choice is up to you.
 
 ## Conclusion
 Is worth to give it a shot and deploy a Node.JS app via Firebase.
