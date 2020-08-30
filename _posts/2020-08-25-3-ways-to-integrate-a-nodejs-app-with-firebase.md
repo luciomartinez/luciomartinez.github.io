@@ -5,16 +5,14 @@ date:   2020-08-25 20:48:00 +0200
 categories: cloud
 ---
 # Deliver a Node.JS App With Firebase
-Since 2017 is possible to integrate [Node.JS](https://nodejs.org) with [Firebase](https://firebase.google.com).<sup>[1](#reference1)</sup>
-There's an official [demonstration](https://youtu.be/LOeioOKUKI8) that develops two Node.JS endpoints.
-There's a [tutorial](https://indepth.dev/building-an-api-with-firebase/) building an API from scratch.
-Now, what happens when an already developed Node.JS app needs to be integrated with Firebase?
-There will be an issue, and the previous articles won't help.
-Getting from two endpoints into a full Node.JS app will become more complex
-requiring a few hours of understanding, debugging and more trying to get it working.
+Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup>[1](#reference1)</sup>
+Google team released a [demonstration](https://youtu.be/LOeioOKUKI8) of two Node.JS endpoints running on the platform.
+Also, there's a [tutorial](https://indepth.dev/building-an-api-with-firebase/) building an API from scratch.
+Now, what happens when an already developed Node.JS app needs to be integrated with Firebase? There'll be an issue.
 
-Hopefully, this article will save other people time on that process since you may find the description of the main issue,
-the analysis and the development of a Node.JS app with Firebase on three different ways for a successful deployment. 
+Getting a Node.JS app working on the platform requires a few hours of understanding, debugging and more troubleshooting of the issue.
+Hopefully, this article will save you time on that process finding the cause of the main issue,
+the analysis and the development of a Node.JS app with Firebase on three different ways for a successful deployment.
 
 ## Things to Consider
 Before talking about the main issue let's define two things:
@@ -40,7 +38,8 @@ The structure of a regular Node.JS app looks something like this:
 ``` 
 
 The script `bin/www.js` will serve the application configuring the HTTP server.
-The application main entry is `app.js` which configures the app (eg. routes, middlewares, etc.) and requires the app's source from the `src` directory.
+The application main entry is `app.js` which configures the app
+(eg. routes, middlewares, etc.) and requires the app's source from the `src/` directory.
 The `test/` directory contains `*.spec.js` files testing each script at the `src/` directory.
 
 Now it's time to talk about the Cloud Functions integration.
@@ -49,7 +48,7 @@ Now it's time to talk about the Cloud Functions integration.
 The installation of Cloud Functions via the [Firebase CLI](https://firebase.google.com/docs/cli)
 creates a `functions/` directory by default with `functions/index.js` as the main entry.
 
-The most natural connection will be to require the app in the main entry of the function module.
+The most natural connection will be to require the app in the main entry of the `functions` module.
 
 ```
 // functions/index.js
