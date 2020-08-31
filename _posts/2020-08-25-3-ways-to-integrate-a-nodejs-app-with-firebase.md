@@ -202,8 +202,6 @@ With this solution the project's structure will change to the next shape:
            "predeploy": "mkdir functions/app && cp -r {app.js,src} functions/app",
            "postdeploy": "rm -r functions/app"
          }
-  
- 4. Add `functions/app` to `.gitignore` 
 
 #### Pros
  - It works too!
