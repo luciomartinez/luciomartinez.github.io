@@ -199,9 +199,8 @@ With this solution the project's structure will change to the next shape:
  This can be done via the `firebase.json` file by updating it with the following block.
  
          "functions": {
-           "predeploy": [
-             "rm -r functions/app; mkdir functions/app && cp -r {app.js,src} functions/app"
-           ]
+           "predeploy": "mkdir functions/app && cp -r {app.js,src} functions/app",
+           "postdeploy": "rm -r functions/app"
          }
   
  4. Add `functions/app` to `.gitignore` 
