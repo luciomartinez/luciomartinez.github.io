@@ -11,13 +11,13 @@ Explain the whole GDPR.
 At the moment of showing a cookie consent there are a couple of different ways to communicate with the users.
 The most common ones are the following two.
 
-__Warn user__
-It notifies the visitor that cookies are being used.
+## Warn User
+It notifies the visitor that the website is using cookies.
 There's a link to either the cookie policy or to learn more about what cookies are and how they are used.
 
 Interaction: "OK"
 
-__Allow to opt-in__
+## Allow to opt-in
 Disable cookies by default and allow visitors to enable them.
 
 Interaction: "OK" / "Decline"
@@ -28,7 +28,15 @@ All the approaches are clear now, and we can continue with their development.
 Start with the basic warning and move into an advanced opt-in approach.
 The simplest one is warn user so let's start with it.
 
-__Re-inventing the wheel? Na__
+## Existing Tools
+There are a couple of open source tools to show the cookie banner:
+ - [Cookie Consent](https://www.npmjs.com/package/cookieconsent)
+ - [GDPR Cookie Notice](https://www.npmjs.com/package/gdpr-cookie-notice)  
+ - [Cookies EU banner](https://www.npmjs.com/package/cookies-eu-banner)  
+
+The one with more weekly downloads over NPM is Cookie Consent. Hence, it was my first choice to use. 
+
+## Cookie Consent
 [Cookie Consent](https://www.osano.com/cookieconsent) is a free and open source tool developed by [Osano](https://www.osano.com).
 The company offers more solutions targeting data privacy law for big tech companies so you are definitely on good hands.
 The JavaScript plugin is fairly easy to integrate so let's get into it.
@@ -71,7 +79,7 @@ Checkout the [documentation](https://www.osano.com/cookieconsent/documentation/a
 
 At the end of the implementation the cookie consent should look similar to the next implementation.
 
-![cookie consent implemented](https://pbs.twimg.com/media/EgWRQ_7X0AA3GWw?format=jpg&name=medium)
+![Cookie Consent implemented](https://pbs.twimg.com/media/EgWRQ_7X0AA3GWw?format=jpg&name=medium)
 
 Now you can see the cookie consent is present letting visitors know that cookies are being used.
 However, if visitors want to disable them then there's no option present to do so.
@@ -89,7 +97,7 @@ at my blog and use it as a reference.
 The previous implementation will help as a starting point.
 There are two more places which requires updates. First at the point of using cookies.
 
-__Disabling cookies__
+## Disable Cookies
 Cookies are going to be disable by default. Is very much likely the only place with cookies usage is on GA so let's use it as a reference.
 Following is the injection of GA update to be disable by default.
 
@@ -105,7 +113,7 @@ Following is the injection of GA update to be disable by default.
 
 As you can see above, the library remains in place, and removes the initialisation code (actually moved, we'll see where to put it next).
 
-__Cookie Consent__
+## Integrate GA with Cookie Consent
 Now the cookie consent will handle the case where visitor allows cookies.
 Here's where the above GA code needs to be moved.
 
@@ -211,18 +219,17 @@ After a longer implementation, the cookie consent should now look similar to the
 
 # Conclusions
 Talk about EU and maybe statistics.
- - Open source is awesome! You don't need to spend time building tools which are built already.
+ - Open source is awesome! Is quicker to make use of existing tools and avoid [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
  - Comply with GDPR turns out to be fairly easy
  - Advanced options can be grant spending a bit more of timing but still not that bad
 
-Disclaimer: do not take legal advices from this article which covers only technical development.
+> Disclaimer: do not take legal advices from this technical article.
 
 # Feedback
-copy/paste from previous post.
+Let me know your thoughts through my [Twitter account](https://twitter.com/delucioux). I'm looking forward to hearing from you!
 
 Sources:
  - https://github.com/osano/cookieconsent
- - https://www.osano.com/cookieconsent/download/
  - https://developers.google.com/analytics/devguides/collection/gtagjs
  - https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out
 
