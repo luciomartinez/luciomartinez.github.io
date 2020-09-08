@@ -87,18 +87,16 @@ A better approach would be to let visitors decide whether enable or not cookies 
 
 There's a saying that goes like this:
 
-    Good is not good enough when better is expected
+> "Good is not enough when better is expected"
 
-A better approach is disabling cookies by default and letting visitors enable them, so let's develop now.
+Having cookies disabled by default and letting visitors enable them could be a better approach, so let's develop it now.
 
-Since it involves several changes, you may want to prefer looking at the [implementation done](https://github.com/luciomartinez/luciomartinez.github.io/pull/3)
-at my blog and use it as a reference.
-
+Since it involves several changes, you may want to prefer looking at the [implementation done](https://github.com/luciomartinez/luciomartinez.github.io/pull/5) over my blog and use it as a reference.
 The previous implementation will help as a starting point.
 There are two more places which requires updates. First at the point of using cookies.
 
 ## Disable Cookies
-Cookies are going to be disable by default. Is very much likely the only place with cookies usage is on GA so let's use it as a reference.
+Cookies are going to be disable by default. Analytics is very much likely the only tool using cookies on a website so let's use it as a reference.
 Following is the injection of GA update to be disable by default.
 
 ```
@@ -113,98 +111,62 @@ Following is the injection of GA update to be disable by default.
 
 As you can see above, the library remains in place, and removes the initialisation code (actually moved, we'll see where to put it next).
 
-## Integrate GA with Cookie Consent
-Now the cookie consent will handle the case where visitor allows cookies.
-Here's where the above GA code needs to be moved.
+## Integrate Analytics with Opt In Contentment
+Since GA doesn't offer opt-in builtin support, [GTag Opt In](https://www.npmjs.com/package/gtag-opt-in) will help to achieve this.
 
-In order to make code still readable, I'm not copying and pasting all over the place
-but rather creating a class which takes care of managing the initialisation of GA and further enabling/disabling cookies.
-```
-  function GAManager() {
-    let isInitialized = false;
-
-    this.enable = function() {
-      initiGAIfNeeded();
-      window['ga-disable-GA_MEASUREMENT_ID'] = false;
-    };
-
-    this.disable = function() {
-      window['ga-disable-GA_MEASUREMENT_ID'] = true;
-    };
-
-    function initiGAIfNeeded() {
-      if (!isInitialized) {
-        initGA();
-      }
-    }
-
-    function initGA() {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-126456490-1');
-
-      isInitialized = true;
-    }
-  }
-```
-
-`GAManager` is a class with the following two methods:
- - `enable`
- - `disable`
-
-When `enable` is called for the first time it will initialise GA.
+`GTagOptIn` registers a single method called `register` which registers the Analytics ID and returns an object.
+The returned object contains two methods, `optin` and `optout` respectively.
+When `optin` is called for the first time it will initialise GA.
 In further calls it will just enable the cookie over the already initialised GA.
+When `optout` is called, it will make sure if GA is initialised then the cookies are, even then, disabled.
 
-When `disable` is called, it will make sure that if GA is initialised then the cookies are, even then, disabled.
-
-Now let's integrate this GA manager with the cookie consent plugin.
+Now let's integrate this tool with the cookie consent plugin.
 
 ```
-  const gaManager = new GAManager();
-
+<script src="https://www.npmcdn.com/gtag-opt-in@1.2.0/dist/index.js"></script>
+<script>
+  const gtag = GTagOptIn.register('UA-126456490-1');
   window.cookieconsent.initialise({
-    type: 'opt-in',
-    palette: {
-      popup: {
-        background: '#edeff5',
-        text: '#838391'
+    "palette": {
+      "popup": {
+        "background": "#000"
       },
-      button: {
-        background: '#4b81e8'
+      "button": {
+        "background": "#f1d600"
       }
     },
+    type: 'opt-in',
     onInitialise: function () {
       const type = this.options.type;
       const didConsent = this.hasConsented();
       if (type === 'opt-in' && didConsent) {
-        gaManager.enable();
+        gtag.optin();
       } else if (type === 'opt-out' && !didConsent) {
-        gaManager.disable();
+        gtag.optout();
       }
     },
     onStatusChange: function() {
       const type = this.options.type;
       const didConsent = this.hasConsented();
       if (type === 'opt-in' && didConsent) {
-        gaManager.enable();
+        gtag.optin();
       } else if (type === 'opt-out' && !didConsent) {
-        gaManager.disable();
+        gtag.optout();
       }
     },
     onRevokeChoice: function() {
       const type = this.options.type;
       if (type === 'opt-in') {
-        gaManager.disable();
+        gtag.optout();
       } else if (type === 'opt-out') {
-        gaManager.enable();
+        gtag.optin();
       }
     }
   });
+</script>
 ```
 
-At the top, there's a new object created from the `GAManager` class.
+At the top, there's a new object created from the `GTagOptIn.register` method.
 Then, it defines three new properties in the plugin's options:
  - `onInitialise` 
  - `onStatusChange` 
@@ -227,11 +189,6 @@ Talk about EU and maybe statistics.
 
 # Feedback
 Let me know your thoughts through my [Twitter account](https://twitter.com/delucioux). I'm looking forward to hearing from you!
-
-Sources:
- - https://github.com/osano/cookieconsent
- - https://developers.google.com/analytics/devguides/collection/gtagjs
- - https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out
 
 To follow up:
  - https://stackoverflow.com/questions/10668292/is-there-a-setting-on-google-analytics-to-suppress-use-of-cookies-for-users-who
