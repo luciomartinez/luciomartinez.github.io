@@ -47,24 +47,20 @@ The JavaScript plugin is fairly easy to integrate so let's get into it.
 > Note: latest version of plugin is v4 but seems like it has not been [released](https://twitter.com/delucioux/status/1298666264794222592/retweets/with_comments) yet.
 Hence, following implementation is using v3.
 
-__CSS dependency__  
+__CSS__  
+Load Cookie Consent styles.
+
 ```
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 ```
+
 Place the tag inside the `<head>` block.
 
-__JS dependency__  
+__JS__  
+Load Cookie Consent and configure it.
+
 ```
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-```
-Place the script at the end of the `<head>` or `<body>` block and at the same time before the configuration block. 
-
-__Configuration__  
-The look and feeling can be customised to match your website style.
-Go to the [download](https://www.osano.com/cookieconsent/download/) page to play with all the options and get the one fits best for you.
-Here's a full configuration block as example:
-
-```
 <script>
 window.cookieconsent.initialise({
   "palette": {
@@ -79,9 +75,11 @@ window.cookieconsent.initialise({
 </script>
 ```
 
-Checkout the [documentation](https://www.osano.com/cookieconsent/documentation/javascript-api/) for getting to know all the available options.
+Place the configuration block at the end of the `<head>` or `<body>` block.
 
-Place the configuration block at the end of the `<body>` block and after loading the Cookie Consent library. 
+The look and feeling can be customised to match your website style.
+Go to the [download](https://www.osano.com/cookieconsent/download/) page to play with all the options and get the one fits best for you.
+Checkout the [documentation](https://www.osano.com/cookieconsent/documentation/javascript-api/) for getting to know all the available options.
 
 ## Results
 At the end of the implementation, the cookie banner should look similar to the next one.
