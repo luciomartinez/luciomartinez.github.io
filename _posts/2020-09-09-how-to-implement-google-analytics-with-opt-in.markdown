@@ -5,8 +5,9 @@ date:   2020-09-18 21:34:00 +0200
 categories: cookies
 ---
 # Introduction
-It's very easy to [enable cookie banner](/cookies/2020/09/18/enable-cookie-banner-in-10-minutes) to warn our website visitors about cookies usage.
-What if we want to allow them to optionally opt in?
+It's very easy to [enable cookie banner](/cookies/2020/09/18/enable-cookie-banner-in-10-minutes) notifying website visitors about cookies usage.
+What if we want to allow visitors to disable cookies?
+Or even better, what if we disable cookies and visitors can opt in?
 Disabling cookies by default is becoming more and more standard.
 Here you are going to find how to implement opt in for Google Analytics.
 
@@ -14,7 +15,7 @@ Here you are going to find how to implement opt in for Google Analytics.
 Before digging deep, I'd like to mention that if you feel lost at any point of the article,
 you can look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/5) done at my blog and use it as a reference.
 
-The first thing to look at is the point of code that uses cookies and disable it.
+The first thing to look at is the point of code using cookies and disable it.
 
 ## Disable Cookies
 Cookies are going to be disable by default.
@@ -34,20 +35,20 @@ As you can see above, the script fetching the library remains in place.
 Removed is the initialisation code. Actually, it's moved, we'll see where to put it next.
 
 ## Integrate Analytics With Cookie Banner
-Since GA doesn't offer opt in builtin support, [GTag Opt In](https://www.npmjs.com/package/gtag-opt-in) will help to achieve this.
+Since GA doesn't offer builtin opt in support, [GTag Opt In](https://www.npmjs.com/package/gtag-opt-in) will help to achieve this.
 
-`GTagOptIn` registers a single method called `register` which registers the Analytics ID and returns an object.
-The returned object contains two methods, `optin` and `optout` respectively.
-When `optin` is called for the first time it will initialise GA.
-In further calls it will just enable the cookie over the already initialised GA.
-When `optout` is called, it will make sure if GA is initialised then the cookies are, even then, disabled.
+`GTagOptIn` have three methods.
+The `register` which registers the Analytics ID.
+When `optIn` is called for the first time it will initialise and enable GA.
+In further calls it will just re-enable GA.
+When `optOut` is called, it will make sure, even if GA is initialised, to disable it.
 
 Now let's integrate this tool with the Cookie Consent plugin.
 
 ```
-<script src="https://www.npmcdn.com/gtag-opt-in@1.2.0/dist/index.js"></script>
+<script src="https://www.npmcdn.com/gtag-opt-in@2.0.0/dist/index.js"></script>
 <script>
-  const gtag = GTagOptIn.register('UA-126456490-1');
+  GTagOptIn.register('UA-126456490-1');
   window.cookieconsent.initialise({
     "palette": {
       "popup": {
@@ -62,26 +63,26 @@ Now let's integrate this tool with the Cookie Consent plugin.
       const type = this.options.type;
       const didConsent = this.hasConsented();
       if (type === 'opt-in' && didConsent) {
-        gtag.optin();
+        GTagOptIn.optIn();
       } else if (type === 'opt-out' && !didConsent) {
-        gtag.optout();
+        GTagOptIn.optOut();
       }
     },
     onStatusChange: function() {
       const type = this.options.type;
       const didConsent = this.hasConsented();
       if (type === 'opt-in' && didConsent) {
-        gtag.optin();
+        GTagOptIn.optIn();
       } else if (type === 'opt-out' && !didConsent) {
-        gtag.optout();
+        GTagOptIn.optOut();
       }
     },
     onRevokeChoice: function() {
       const type = this.options.type;
       if (type === 'opt-in') {
-        gtag.optout();
+        GTagOptIn.optOut();
       } else if (type === 'opt-out') {
-        gtag.optin();
+        GTagOptIn.optIn();
       }
     }
   });
