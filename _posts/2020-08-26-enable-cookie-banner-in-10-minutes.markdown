@@ -93,7 +93,7 @@ I invite you to read the [How To Opt In Google Analytics](/cookies/2020/09/18/ho
 
 In case you encounter issues, you can take a look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/6) done at my blog and use it as a reference.
 
-# Conclusions
+# Conclusion
 GDPR has been implemented since 2018.
 On its first year, there was a report showing its most important [numbers for 2019](https://ec.europa.eu/info/sites/info/files/infographic-gdpr_in_numbers.pdf).
 Almost all EU countries adapted their national legislation.
