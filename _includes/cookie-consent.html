@@ -1,5 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script src="https://www.npmcdn.com/gtag-opt-in@2.0.0/dist/index.js"></script>
 <script>
+  GTagOptIn.register('UA-126456490-1');
   window.cookieconsent.initialise({
     palette: {
       popup: {
@@ -8,6 +10,33 @@
       },
       button: {
         background: '#2a7ae2'
+      }
+    },
+    type: 'opt-in',
+    onInitialise: function () {
+      const type = this.options.type;
+      const didConsent = this.hasConsented();
+      if (type === 'opt-in' && didConsent) {
+        GTagOptIn.optIn();
+      } else if (type === 'opt-out' && !didConsent) {
+        GTagOptIn.optOut();
+      }
+    },
+    onStatusChange: function() {
+      const type = this.options.type;
+      const didConsent = this.hasConsented();
+      if (type === 'opt-in' && didConsent) {
+        GTagOptIn.optIn();
+      } else if (type === 'opt-out' && !didConsent) {
+        GTagOptIn.optOut();
+      }
+    },
+    onRevokeChoice: function() {
+      const type = this.options.type;
+      if (type === 'opt-in') {
+        GTagOptIn.optOut();
+      } else if (type === 'opt-out') {
+        GTagOptIn.optIn();
       }
     }
   });
