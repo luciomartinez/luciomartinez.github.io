@@ -46,6 +46,7 @@ When `optOut` is called, it will make sure, even if GA is initialised, to disabl
 Now let's integrate this tool with the Cookie Consent plugin.
 
 ```
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script src="https://www.npmcdn.com/gtag-opt-in@2.0.0/dist/index.js"></script>
 <script>
   GTagOptIn.register('UA-126456490-1');
