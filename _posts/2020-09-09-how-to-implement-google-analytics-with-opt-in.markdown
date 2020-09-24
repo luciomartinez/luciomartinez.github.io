@@ -110,8 +110,8 @@ In case you encounter issues, you can take a look at the [implementation](https:
  - Comply with GDPR turns out to be fairly easy
  - Advanced options can be grant spending a bit more of timing but still not that bad
 
-> Disclaimer: do not take legal advices from this technical article.
-
 # Feedback
 Let me know your thoughts through my [Twitter account](https://twitter.com/delucioux).
 I'm looking forward to hearing from you!
+
+> Disclaimer: do not take legal advices from this technical article.

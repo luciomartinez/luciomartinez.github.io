@@ -5,14 +5,16 @@ date:   2020-09-18 19:51:00 +0200
 categories: cookies
 ---
 # Introduction
-Cookies, not the sweet ones, but the digital ones are present in almost every website.
-As a website owner, small or huge, you will need to check out how many people have visited the website lately.
-The most popular solution for this is Google Analytics (GA), and it requires the usage of cookies.  
+Cookies, not the sweet ones but the digital ones, are present in almost every website.
+As a website owner, small or huge, you may want to know how many visitors it received lately.
+The most popular solution for this is Google Analytics (GA), and it requires the usage of cookies.
+Since the introduction of GDPR, there's a few things to consider when using cookies.
+   
+> The protection of natural persons in relation to the processing of personal data is a fundamental right.
 
-> The protection of natural persons in relation to the processing of personal data is a fundamental right
-
-States the European General Data Protection Regulation (GDPR), and it includes cookies.
-Users must, first, be informed of active cookies and their purpose.
+Statement by the European General Data Protection Regulation (GDPR).
+Two things are overall to be considered when using cookies.
+First, users must be informed of active cookies and their purpose.
 Secondly, must be able to disable them if desired.
 
 A banner act as an emerging window that notifies user.
@@ -72,7 +74,7 @@ window.cookieconsent.initialise({
 });
 ```
 
-Checkout the [documentation](https://www.osano.com/cookieconsent/documentation/about-cookie-consent/) for reading all the options available.
+Checkout the [documentation](https://www.osano.com/cookieconsent/documentation/javascript-api/) for getting to know all the available options.
 
 At the end of the implementation, the cookie banner should look similar to the next one.
 
@@ -90,8 +92,8 @@ Almost all EU countries adapted their national legislation.
 As the time pass, it becomes more and more important to comply with it.
 Now we can see that is fairly easy to do so.
 
-> Disclaimer: do not take legal advices from this technical article.
-
 # Feedback
 Let me know your thoughts through my [Twitter account](https://twitter.com/delucioux).
 I'm looking forward to hearing from you!
+
+> Disclaimer: do not take legal advices from this technical article.
