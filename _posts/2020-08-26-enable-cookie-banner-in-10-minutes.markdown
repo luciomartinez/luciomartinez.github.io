@@ -24,6 +24,9 @@ On this article, I'll explain how to implement a banner which notifies about coo
 In case you're interested in how to request permission too, head to the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in) article.
 
 # Implementation
+Before digging deep, I'd like to mention that if you feel lost at any point of the article,
+you can look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/6) done at my blog and use it as a reference.
+
 The development of a banner may take some hours or even days.
 By taking advantage of open source, we can speed up this process and choose an existing tool that takes as little as 10 minutes.
 Let's take a closer look at what tools are available and which one is the best to quickly use.
@@ -89,6 +92,8 @@ Now you can see the cookie banner present letting visitors know the website make
 
 A better approach would be to let visitors disable cookies on the website.
 I invite you to read the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in) article where you can find this approach's implementation in detail.
+
+In case you encounter issues, you can take a look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/6) done at my blog and use it as a reference.
 
 # Conclusions
 GDPR has been implemented since 2018.
