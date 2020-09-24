@@ -62,6 +62,7 @@ Go to the [download](https://www.osano.com/cookieconsent/download/) page to play
 Here's a full configuration block as example:
 
 ```
+<script>
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
@@ -72,10 +73,14 @@ window.cookieconsent.initialise({
     }
   }
 });
+</script>
 ```
 
 Checkout the [documentation](https://www.osano.com/cookieconsent/documentation/javascript-api/) for getting to know all the available options.
 
+Place the configuration block at the end of the `<body>` block and after loading the Cookie Consent library. 
+
+## Results
 At the end of the implementation, the cookie banner should look similar to the next one.
 
 ![Cookie banner saying "This website uses cookies to ensure you get the best experience on our website." with a link that reads "Learn more" and a button saying "Got it!"](https://pbs.twimg.com/media/EgWRQ_7X0AA3GWw?format=jpg&name=medium)
