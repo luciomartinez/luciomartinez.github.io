@@ -13,7 +13,7 @@ Here you are going to find how to implement opt in for Google Analytics.
 
 # Implementation
 Before digging deep, I'd like to mention that if you feel lost at any point of the article,
-you can look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/5) done at my blog and use it as a reference.
+you can look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/7) done at my blog and use it as a reference.
 
 The first thing to look at is the point of code using cookies and disable it.
 
@@ -105,7 +105,7 @@ The cookie banner should now look similar to the next one.
 
 ![Cookie banner saying "This website uses cookies to ensure you get the best experience on our website." with a link that reads "Learn more" and two buttons where the first one says "Decline" and the second one says "Allow cookies"](https://pbs.twimg.com/media/Ega4GsdXsAEKWrz?format=jpg&name=medium)
 
-In case you encounter issues, you can take a look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/5) done at my blog and use it as a reference.
+In case you encounter issues, you can take a look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/7) done at my blog and use it as a reference.
 
 # Conclusions
  - Open source is awesome! Is quicker to make use of existing tools and avoid [reinventing the wheel](https://en.wikipedia.org/wiki/Reinventing_the_wheel).
