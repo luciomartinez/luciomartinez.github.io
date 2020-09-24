@@ -12,16 +12,16 @@ Since the introduction of GDPR, there's a few things to consider when using cook
    
 > The protection of natural persons in relation to the processing of personal data is a fundamental right.
 
-Statement by the European General Data Protection Regulation (GDPR).
-Two things are overall to be considered when using cookies.
+Statement by the European General Data Protection Regulation (GDPR) highlighting the protection of user data and it involves cookies.
+To comply with GDPR while using cookies there are two main things to consider.
 First, users must be informed of active cookies and their purpose.
 Secondly, must be able to disable them if desired.
 
-A banner act as an emerging window that notifies user.
-It can also be extended to request for permission.
+A banner act as an emerging window that notifies user about cookies usage, complying with the first point.
+It can also be extended to request for permission, complying with the second point as well.
 On this article, I'll explain how to implement a banner which notifies about cookies usage.
 
-In case you're interested in how to request permission too, you can find a guide on its implementation on the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in) article.
+In case you're interested in how to request permission too, head to the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in) article.
 
 # Implementation
 The development of a banner may take some hours or even days.
@@ -34,7 +34,7 @@ There are a couple of open source tools to show the cookie banner:
  - [GDPR Cookie Notice](https://www.npmjs.com/package/gdpr-cookie-notice)  
  - [Cookies EU banner](https://www.npmjs.com/package/cookies-eu-banner)  
 
-The one with more weekly downloads over NPM is Cookie Consent. Hence, it was my first choice to use. 
+The one with more weekly downloads over NPM is Cookie Consent. Therefore, it was my choice. 
 
 ## Integrating Cookie Consent
 [Cookie Consent](https://www.osano.com/cookieconsent) is a free and open source tool developed by [Osano](https://www.osano.com).
@@ -48,18 +48,18 @@ __CSS dependency__
 ```
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 ```
-Place the tag on the `<head>`.
+Place the tag inside the `<head>` block.
 
 __JS dependency__  
 ```
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 ```
-Place the script at the end of the `<head>` or at the end of the `<body>` and make sure is before the configuration block. 
+Place the script at the end of the `<head>` or `<body>` block and at the same time before the configuration block. 
 
 __Configuration__  
 The look and feeling can be customised to match your website style.
 Go to the [download](https://www.osano.com/cookieconsent/download/) page to play with all the options and get the one fits best for you.
-Here's a configuration example:
+Here's a full configuration block as example:
 
 ```
 window.cookieconsent.initialise({
@@ -80,9 +80,9 @@ At the end of the implementation, the cookie banner should look similar to the n
 
 ![Cookie banner saying "This website uses cookies to ensure you get the best experience on our website." with a link that reads "Learn more" and a button saying "Got it!"](https://pbs.twimg.com/media/EgWRQ_7X0AA3GWw?format=jpg&name=medium)
 
-Now you can see cookie banner is present letting visitors know that the website makes use of cookies.
-However, should visitors want to disable them, they have no way to do so.
-A better approach would be to let visitors decide whether enable or not cookies on the website.
+Now you can see the cookie banner present letting visitors know the website makes use of cookies.
+
+A better approach would be to let visitors disable cookies on the website.
 I invite you to read the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in) article where you can find this approach's implementation in detail.
 
 # Conclusions
