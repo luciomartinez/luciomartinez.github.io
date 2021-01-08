@@ -90,7 +90,7 @@ There are two ways to go here:
 
 Choosing which way to go is up to you.
 Either way, make sure to have a well-defined set of skills, and that they don't repeat each other.
-For instance, `CSS` could be one and the other one `Cascade Style Sheet`, is the same thing so choose one.
+For instance, `CSS` could be one and the other one `Cascade Style Sheet` but both are the same thing so choose one.
 
 # Feedback 🙏
 Thanks for made it so far! I'd appreciate you sharing it in a social network 🗣 and will welcome your feedback on [Twitter](https://twitter.com/delucioux).
