@@ -44,7 +44,7 @@ It must contain keywords referring to your area of expertise. Examples:
  - _NodeJS Engineer_
 
 You can try to combine a few if it applies to your profile. Examples:
- - _Go expert | Java Developer_
+ - _SQL expert & Java Developer_
  - _React and NodeJS Engineer_
 
 Think which of your skills are the most important ones and try to see if it could be in the title.
