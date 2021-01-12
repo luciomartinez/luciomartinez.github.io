@@ -75,13 +75,21 @@ They are mostly the same: quick and easy to complete.
 You should get a certificate at the end which you can submit to LinkedIn and share your achievement.
 **To make it even more noticeable, make a post with the certificate on it.**
 Your peers will like it and more people will see it, increasing your connections at the same time.
-Following are two posts as example via [Coursera](https://www.coursera.org) and [Udemy](https://www.udemy.com) respectively.
+To have a better idea of how does that work, following are two excellent posts.
 
-![LinkedIn post sharing the completion of the online specialization "Applied Data Scien with Python" from Coursera](https://cdn-images-1.medium.com/max/1600/1*bXBpYGMoj_w_adbpMgE83Q.png)
+Here's [Akanksha Joshi](https://www.linkedin.com/in/akankshajoshi3089/)'s [Udemy](https://www.udemy.com) certificate:
 
-![LinkedIn post sharing the completion of online course "Effectively Managing Emplyee Performance" from Udemy](https://cdn-images-1.medium.com/max/1600/1*KCyXZ47CP1UpEpHyrhpBYw.png)
+![Udemy Certificate of Completion for Akanksha Joshi in the "SQL-MySQL for Data Analytics and Business Intelligence" course](https://cdn-images-1.medium.com/max/1600/1*NT0lMgxalimEJHjehFRefQ.png)
 
-More advanced certifications that are highly recognized in the industry (if we can say so) include [AWS Certification](https://aws.amazon.com/certification/) and [Scrum.org](https://www.scrum.org).
+> LinkedIn post sharing the Certificate of Completion for the online course "SQL-MySQL for Data Analytics and Business Intelligence" from Udemy
+
+Here's [Marlene Faria](https://www.linkedin.com/in/marlenefarias/)'s [Coursera](https://www.coursera.org) certificate:
+
+![Coursera Certificate of Completion for Marlene Faria in the "Python Data Structure" course](https://cdn-images-1.medium.com/max/1600/1*xKNntYJzp9igfSwcs1KdoA.png)
+
+> LinkedIn post sharing the Course Certificate for the online course "Python Data Structures" from Coursera
+
+Other certifications that are popular in the industry include [AWS Certification](https://aws.amazon.com/certification/) and [Scrum.org](https://www.scrum.org).
 
 ## 5th step: Skills
 There are two ways to go here: 
