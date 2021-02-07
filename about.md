@@ -9,7 +9,9 @@ JavaScript Developer using React to build awesome websites!
 Follow me on GitHub [@luciomartinez](https://github.com/luciomartinez) and Twitter [@delucioux](https://twitter.com/delucioux).
 
 ## Community
-Contributing back to the community is great! One way I have is via StackOverflow [@Lucio](https://stackoverflow.com/users/1505348/lucio).
+Contributing back to the community is great! One way I do is via StackOverflow:
+
+<a href="https://stackoverflow.com/users/1505348/lucio"><img src="https://stackexchange.com/users/flair/1465637.png?theme=clean" width="208" height="58" alt="profile for Lucio at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Lucio at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
 
 ## Publications
 Recent posts are publish here and on Medium [@delucioux](https://medium.com/@delucioux) as well.
