@@ -21,4 +21,4 @@ Website built on [GitHub pages](https://pages.github.com/) with [Jekyll](http://
 The code is open source and can be forked on its GitHub [repository](https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io).
 
 ## Licensing
-site logo © 2020 Lucio Martinez; posts licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> with attribution required
+site logo © 2022 Lucio Martinez; posts licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> with attribution required
