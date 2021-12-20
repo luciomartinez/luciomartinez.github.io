@@ -44,9 +44,6 @@ The one with more weekly downloads over NPM is Cookie Consent. Therefore, it was
 The company offers more solutions targeting data privacy law for big tech companies, so you are definitely on good hands.
 The JavaScript plugin is fairly easy to integrate so let's get into it.
 
-> Note: latest version of plugin is v4 but seems like it has not been [released](https://twitter.com/delucioux/status/1298666264794222592/retweets/with_comments) yet.
-Hence, following implementation is using v3.
-
 __CSS__  
 Load Cookie Consent styles.
 
