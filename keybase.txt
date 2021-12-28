@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/lucio
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://luciomartinez.github.io
+  * I am lucio (https://keybase.io/lucio) on keybase.
+  * I have a public key with fingerprint 418C D569 DA9D ECA7 28BC  3110 D9C5 40EA B970 2E30
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01201bc85304d6071caecddab6ef94c3b8ceb9ee4a3d119a084e238ea0fff0bc0b6e0a",
+      "fingerprint": "418cd569da9deca728bc3110d9c540eab9702e30",
+      "host": "keybase.io",
+      "key_id": "d9c540eab9702e30",
+      "kid": "0101800967d582b547a3d05ce8277abccf6be14db6eb08194ad8f801336200ebac710a",
+      "uid": "6e47a6356295c88b549cc57382286900",
+      "username": "lucio"
+    },
+    "service": {
+      "hostname": "luciomartinez.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1640718446,
+  "expire_in": 157680000,
+  "prev": "33d3d02f8737786dc58030085112a115ffb53499d8a458a3fbd93738c5f5ed25",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMN0AnicbZJ/UFRVFMcXXAvW+JFlhDmTPaRswvW+3/dtwyBijGOR6RrFDLq+H/ct
+b2H3rfveokACFYkMFOMwE5IDaE4DhSBljBhIiQQMiDlETOAoSkRkjJMUNRJIbyln
++qO/7txzv+dzvufc0xW2zGQJGvl6061zXisI6r9w3G/i+/d68jBBlXIwWx6WiZYO
+lCUhTXdkKhJmwwBOAFwQIU0CSmIAi4s8EiWJFxgkc5RIClBEAocQxZMSjnM8gBQi
+SIh4IMsyEERgCAGPxWGy4nEin9eneHQDS+FQlGiGk3hOQiLPElAQSRwHEifSFEC8
+wLGAQCQwEjNULZBhmBN4DVkV1YgZF8eSvf/R3/cNcAgAx7ASDQmBpljDIKBFBAmW
+5QVRlBkB4ZRk2BMAxDmKl6AMAU6SDAEAEniRxZd8+5dwDDIADEkzBEeLEBo8ThRp
+loQEARkOBOr6NeTz8G5kqLP8omHzYBxmhLIVEQWmGmjjv89u3qcrHpRrdSp6hl/4
+py+vT9VVUc0yRBm67tVsAYie4w1k7UeC41+eQ1A8kjFPIyMb+TRF9WA23FCKuhIo
+gDOU8VGQopg4DB3wKj7kUAIKmmWMkQAQqIOyDSRJSsZQCBmyJMtCRhJpCEgAII3j
+BI/jtCwLNElxnAR5ioY8KQsSRxpNi7RMI4mgsUCH+zwqZiMMqM47DaamOD287vch
+7GDnhXSzKchiemB5cGDRTJbQyPvr911YpOnYmQMmpUUtTRFmKkZD2q5/mb7DdV3i
+W+Xs1G/mrroW37NeVUoe02bW2dj37a3nBn6zH96WMv70xQK+HZIzrvzd5c6VG/ec
+/WW76aWWusZVx/MtnxQ2/1r5Cj3WndLdvfazmjT26J7uweq+waOTZX8WplduPNnx
+ww7HlobFGF9BYsn6thr3WZC0mHYooX71c0/oEb228rrmqjfSUtacnnun+N6t/dU/
+/T4TjeX7Xxhx9wIucXNDbJn9fFHypqo1/fc2uOxD11LDI8bS45+cDHlKd5hnQy7t
+HL6juQ5lJpVEdyUUd3YeWT/5VkRz4QBXEF2ZO6QNqj03etnmanvCz9rH7jKw0jYb
+/GJVYuOuMEKpj/v0+ddfm15rX+FyPF5+rWgidC6qOMK/SvwA5k+vG91msU6cuJFY
+sytZxtO2TKxIyEzqib8SPP7FQEPkYljW4uc3j6kdeQ8f+SN3aK913BL7/ZWmjtum
+hd1FlVGlhFlJCKFbUhZig5Pg5fPO8OaGiLvzHTvNNRd9oZe3NnVNbd/60ezLl6Km
+KmZr51urlgXVnupTW6PPPJowtnywrPbDH3Nqe06P1rXZ3m3XB80nSkpjvs3aQPaW
+pGbAV+PfHn/mwYKYv5SHvro7f7IxvO+Rec3Xsy853DrtHw4ado9Nrb7p3TxCt4dM
+dJ1609w+VOGec9dnPnu7aeHO3yKcxxI=
+=vDj7
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/lucio
+
+==================================================================
