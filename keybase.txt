@@ -6,66 +6,47 @@ I hereby claim:
 
   * I am an admin of https://luciomartinez.github.io
   * I am lucio (https://keybase.io/lucio) on keybase.
-  * I have a public key with fingerprint 418C D569 DA9D ECA7 28BC  3110 D9C5 40EA B970 2E30
+  * I have a public key ASC7hV_mmnC1_qIjHAT3WO1rpQMpzOsOwh_YenOEtnNtEgo
 
 To do so, I am signing this object:
 
 {
   "body": {
     "key": {
-      "eldest_kid": "01201bc85304d6071caecddab6ef94c3b8ceb9ee4a3d119a084e238ea0fff0bc0b6e0a",
-      "fingerprint": "418cd569da9deca728bc3110d9c540eab9702e30",
+      "eldest_kid": "0120bb855fe69a70b5fea2231c04f758ed6ba50329cceb0ec21fd87a7384b6736d120a",
       "host": "keybase.io",
-      "key_id": "d9c540eab9702e30",
-      "kid": "0101800967d582b547a3d05ce8277abccf6be14db6eb08194ad8f801336200ebac710a",
+      "kid": "0120bb855fe69a70b5fea2231c04f758ed6ba50329cceb0ec21fd87a7384b6736d120a",
       "uid": "6e47a6356295c88b549cc57382286900",
       "username": "lucio"
     },
+    "merkle_root": {
+      "ctime": 1641332476,
+      "hash": "10c137b909be2ed7f8f1e1b181354631bf9f0ad43bf37d665c928ddc78dbf23a6bfc600df1d6c7a8278dfde8c3208ce6c08ba6b5f16121c6ed04bb571ae5efe9",
+      "hash_meta": "a18ae7b34c823608efeff980bae309b11e64fafa1f6d521ea7d8b9bac4d99fb4",
+      "seqno": 21561793
+    },
     "service": {
+      "entropy": "4icdy0GP59oedPDkOhncBrqb",
       "hostname": "luciomartinez.github.io",
       "protocol": "https:"
     },
     "type": "web_service_binding",
-    "version": 1
+    "version": 2
   },
-  "ctime": 1640718446,
-  "expire_in": 157680000,
-  "prev": "33d3d02f8737786dc58030085112a115ffb53499d8a458a3fbd93738c5f5ed25",
-  "seqno": 20,
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1641332531,
+  "expire_in": 504576000,
+  "prev": "82b3e2106a68468b79baaf7acabe426199b667c91dc830e9e5d90bc254e58344",
+  "seqno": 28,
   "tag": "signature"
 }
 
 which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.1.13
-Comment: https://keybase.io/crypto
-
-yMN0AnicbZJ/UFRVFMcXXAvW+JFlhDmTPaRswvW+3/dtwyBijGOR6RrFDLq+H/ct
-b2H3rfveokACFYkMFOMwE5IDaE4DhSBljBhIiQQMiDlETOAoSkRkjJMUNRJIbyln
-+qO/7txzv+dzvufc0xW2zGQJGvl6061zXisI6r9w3G/i+/d68jBBlXIwWx6WiZYO
-lCUhTXdkKhJmwwBOAFwQIU0CSmIAi4s8EiWJFxgkc5RIClBEAocQxZMSjnM8gBQi
-SIh4IMsyEERgCAGPxWGy4nEin9eneHQDS+FQlGiGk3hOQiLPElAQSRwHEifSFEC8
-wLGAQCQwEjNULZBhmBN4DVkV1YgZF8eSvf/R3/cNcAgAx7ASDQmBpljDIKBFBAmW
-5QVRlBkB4ZRk2BMAxDmKl6AMAU6SDAEAEniRxZd8+5dwDDIADEkzBEeLEBo8ThRp
-loQEARkOBOr6NeTz8G5kqLP8omHzYBxmhLIVEQWmGmjjv89u3qcrHpRrdSp6hl/4
-py+vT9VVUc0yRBm67tVsAYie4w1k7UeC41+eQ1A8kjFPIyMb+TRF9WA23FCKuhIo
-gDOU8VGQopg4DB3wKj7kUAIKmmWMkQAQqIOyDSRJSsZQCBmyJMtCRhJpCEgAII3j
-BI/jtCwLNElxnAR5ioY8KQsSRxpNi7RMI4mgsUCH+zwqZiMMqM47DaamOD287vch
-7GDnhXSzKchiemB5cGDRTJbQyPvr911YpOnYmQMmpUUtTRFmKkZD2q5/mb7DdV3i
-W+Xs1G/mrroW37NeVUoe02bW2dj37a3nBn6zH96WMv70xQK+HZIzrvzd5c6VG/ec
-/WW76aWWusZVx/MtnxQ2/1r5Cj3WndLdvfazmjT26J7uweq+waOTZX8WplduPNnx
-ww7HlobFGF9BYsn6thr3WZC0mHYooX71c0/oEb228rrmqjfSUtacnnun+N6t/dU/
-/T4TjeX7Xxhx9wIucXNDbJn9fFHypqo1/fc2uOxD11LDI8bS45+cDHlKd5hnQy7t
-HL6juQ5lJpVEdyUUd3YeWT/5VkRz4QBXEF2ZO6QNqj03etnmanvCz9rH7jKw0jYb
-/GJVYuOuMEKpj/v0+ddfm15rX+FyPF5+rWgidC6qOMK/SvwA5k+vG91msU6cuJFY
-sytZxtO2TKxIyEzqib8SPP7FQEPkYljW4uc3j6kdeQ8f+SN3aK913BL7/ZWmjtum
-hd1FlVGlhFlJCKFbUhZig5Pg5fPO8OaGiLvzHTvNNRd9oZe3NnVNbd/60ezLl6Km
-KmZr51urlgXVnupTW6PPPJowtnywrPbDH3Nqe06P1rXZ3m3XB80nSkpjvs3aQPaW
-pGbAV+PfHn/mwYKYv5SHvro7f7IxvO+Rec3Xsy853DrtHw4ado9Nrb7p3TxCt4dM
-dJ1609w+VOGec9dnPnu7aeHO3yKcxxI=
-=vDj7
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgu4Vf5ppwtf6iIxwE91jta6UDKczrDsIf2HpzhLZzbRIKp3BheWxvYWTESpcCHMQggrPiEGpoRot5uq96yr5CYZm2Z8kdyDDp5dkLwlTlg0TEILPLVGjqAmd/z6BsOrYbY3shn+Jx++UtKuN6wCVJDHl7AgHCo3NpZ8RACXp3OzAbFSxDDqdz14zXk3rAt52NeO+RMq3mOf+cFDHyLRjaD6Flk/i3+yHpLdgCQbTvN7Pq24Jk1AWgDz6/BKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJrbF/SMZxjyrZfcmVMkhZMmhq0Ro8SDBHnli1vhhp7ko3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
