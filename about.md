@@ -14,7 +14,7 @@ My name is Lucio and I'm a Web Developer, currently building cool stuff on Spoti
 
 Follow me on GitHub [@luciomartinez](https://github.com/luciomartinez) and Twitter [@delucioux](https://twitter.com/delucioux).
 
-Shoot me an [email](mailto:martinezlucio.com@gmail.com) for quicker communication. Public key available on Keybase [@lucio](https://keybase.io/lucio).
+Shoot me an [email](mailto:martinezlucio.com@gmail.com) for quicker communication.
 
 ## Dev Community
 I love contributing back to the development community, specially on StackOverflow:
