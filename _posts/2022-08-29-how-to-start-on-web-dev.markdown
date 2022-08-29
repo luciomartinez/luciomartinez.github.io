@@ -13,7 +13,7 @@ Note: although technology is constantly changing, the following described concep
 
 Let me introduce the biggest concepts first.
 
-## Birds' Eyes' View
+## Birds' Eye View
 
 So the biggest concepts these day include:
 
