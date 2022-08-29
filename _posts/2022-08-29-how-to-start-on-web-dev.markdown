@@ -5,7 +5,7 @@ date:   2022-08-29 23:40:30 +0200
 categories: web
 ---
 # Introduction
-As a Web Developer, I often get the question _How do I start developing on Web?_. Following you'll find a basic summary that can be handy these days as a first step into the Web Development world.
+Following is my take on _How to start developing on Web?_ where you'll find a basic summary that can be handy these days as a first step into the Web Development world.
 
 Note: although technology is constantly changing, the following described concepts have been the most predominant out there for quite some time (at least 5 year) and will likely remain the same for a while.
 
