@@ -16,7 +16,7 @@ Follow me on GitHub [@luciomartinez](https://github.com/luciomartinez), Twitter 
 
 Shoot me an [email](mailto:martinezlucio.com@gmail.com) for quicker communication.
 
-## Dev Community
+## Community
 I love contributing back to the development community, specially on StackOverflow:
 
 <a href="https://stackoverflow.com/users/1505348/lucio"><img src="https://stackexchange.com/users/flair/1465637.png?theme=clean" width="208" height="58" alt="profile for Lucio at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Lucio at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
