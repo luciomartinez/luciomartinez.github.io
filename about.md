@@ -6,13 +6,13 @@ permalink: /about/
 ## Me
 Hey 👋
 
-My name is Lucio and I'm a Web Developer, currently building cool stuff at Spotify in Stockholm, Sweden.
+My name is Lucio and I'm a Senior Software Engineer, currently building cool stuff at Spotify HQ in Stockholm, Sweden.
 
 ![](https://i.stack.imgur.com/Zu2Ra.jpg?s=128&g=1)
 
 ## Social
 
-Follow me on GitHub [@luciomartinez](https://github.com/luciomartinez), Twitter [@delucioux](https://twitter.com/delucioux) and [LinkedIn](https://www.linkedin.com/in/martinezlucio/).
+Follow me on GitHub [@luciomartinez](https://github.com/luciomartinez) and [LinkedIn](https://www.linkedin.com/in/martinezlucio/).
 
 Shoot me an [email](mailto:martinezlucio.com@gmail.com) for quicker communication.
 
@@ -26,4 +26,4 @@ Website built on [GitHub pages](https://pages.github.com/) with [Jekyll](http://
 The code is [open sourced via GitHub](https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io).
 
 ## Licensing
-site logo © 2023 Lucio Martinez; posts licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> with attribution required
+site logo © 2026 Lucio Martinez; posts licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a> with attribution required
