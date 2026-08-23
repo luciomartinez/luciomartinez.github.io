@@ -80,21 +80,21 @@ Spam accounts have similar alerting numbers:
 
 It is easy to see note them when you see the number of followers that they have in a short period of time:
 
-![followers list scalated quickly](http://i.imgur.com/LaGiKDR.png)
+![followers list scalated quickly](https://i.imgur.com/LaGiKDR.png)
 
 As you can see in the previous image, no human can start following 150 persons in a day.
 
 Here is an example for how ridiculously can an account increase it numbers in a matter of seconds wasting money on Facebook:
 
-![facebook account for mtv news](http://i.imgur.com/9rrlDBj.png)
+![facebook account for mtv news](https://i.imgur.com/9rrlDBj.png)
 
 This is the website given on a link from a Twitter spam account:
 
-![website diet-news.us](http://i.imgur.com/JCGzwXY.png)
+![website diet-news.us](https://i.imgur.com/JCGzwXY.png)
 
 The following picture shows a spam account being used to promote site content:
 
-![facebook widget in external website showing spam account liked it](http://i.imgur.com/kDTbapp.png)
+![facebook widget in external website showing spam account liked it](https://i.imgur.com/kDTbapp.png)
 
 Do you want to know the actual Twitter account? Here you go: https://twitter.com/_sharply_
 

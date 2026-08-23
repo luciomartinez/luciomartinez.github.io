@@ -11,7 +11,7 @@ email: martinezlucio.com@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog about software by Lucio Martinez.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://luciomartinez.github.io"
+url: "https://luciomartinez.github.io"
 twitter_username: delucioux
 github_username:  luciomartinez
 
