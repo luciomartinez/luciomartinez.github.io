@@ -257,13 +257,18 @@ description: Senior Software Engineer at Spotify, based in Stockholm, Sweden.
   </div>
 
   <div class="contact-links">
-    <a class="button button-primary" href="mailto:{{ site.email | escape }}">Send an email</a>
+    <a class="button button-primary" href="mailto:{{ site.email | escape }}">
+      {% include contact-icon.html name='email' %}
+      Send an email
+    </a>
     <a class="button button-secondary" href="{{ linkedin_url | escape }}" rel="me">
+      {% include contact-icon.html name='linkedin' %}
       LinkedIn
     </a>
 
     {% if site.github_username %}
       <a class="button button-secondary" href="https://github.com/{{ site.github_username | url_encode }}" rel="me">
+        {% include contact-icon.html name='github' %}
         GitHub
       </a>
     {% endif %}

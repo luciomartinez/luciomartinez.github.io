@@ -784,6 +784,22 @@ section[id] {
   gap: 10px;
 }
 
+.contact-icon {
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  path[fill] {
+    fill: currentColor;
+  }
+}
+
 // About and writing archive share the same calm reading-column treatment.
 .about-page,
 .archive-page {
