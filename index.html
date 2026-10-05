@@ -1,21 +1,271 @@
 ---
 layout: default
+title: Senior Software Engineer
+description: Senior Software Engineer at Spotify, based in Stockholm, Sweden.
 ---
 
-<div class="home">
+{% assign linkedin_url = site.linkedin_url | default: 'https://www.linkedin.com/in/martinezlucio/' %}
 
-  <h1 class="page-heading">Posts</h1>
+<section class="hero" aria-labelledby="hero-title">
+  <p class="section-kicker">Senior software engineer &middot; Stockholm</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-title" id="hero-title">
+        Thoughtful products.<br>
+        Resilient systems.
+      </h1>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+      <p class="hero-summary">
+        I&rsquo;m Lucio. My background is in frontend and full-stack engineering,
+        and I enjoy building thoughtful web experiences.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#work">Explore selected work</a>
+        <a class="button button-secondary" href="{{ linkedin_url | escape }}" rel="me">
+          Connect on LinkedIn
+        </a>
+      </div>
+
+    </div>
+
+    <aside class="hero-aside" aria-label="Professional profile">
+      <dl class="profile-card">
+        <div class="profile-item">
+          <dt class="profile-label">Currently</dt>
+          <dd class="profile-value">Senior engineer at Spotify</dd>
+        </div>
+
+        <div class="profile-item">
+          <dt class="profile-label">Based in</dt>
+          <dd class="profile-value">Stockholm, Sweden</dd>
+        </div>
+
+        <div class="profile-item">
+          <dt class="profile-label">Building since</dt>
+          <dd class="profile-value">2014</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="work-section" id="work" aria-labelledby="work-title">
+  <header class="section-heading">
+    <p class="section-kicker">Selected work</p>
+    <h2 class="section-title" id="work-title">Complex problems, considered solutions.</h2>
+    <p class="section-summary">
+      My work has spanned music, mobility, entertainment, and healthcare.
+    </p>
+  </header>
+
+  <div class="work-grid">
+    <article class="work-card work-card-featured work-card--spotify">
+      <p class="work-index" aria-hidden="true">01</p>
+      <p class="work-meta">Spotify &middot; 2021&ndash;present</p>
+
+      <h3 class="work-title">Music for everyone, right in the browser.</h3>
+
+      <p class="work-description">
+        I&rsquo;m a senior software engineer at Spotify. My experience includes
+        the Web Player, which lets people listen to music in their browser.
+      </p>
+
+      <ul class="work-tags" aria-label="Areas of focus">
+        <li class="tag">Music</li>
+        <li class="tag">Web development</li>
+      </ul>
+      <a class="work-link" href="https://open.spotify.com/">
+        Visit Web Player <span aria-hidden="true">&nearr;</span>
+      </a>
+    </article>
+
+    <article class="work-card work-card--sixt">
+      <p class="work-index" aria-hidden="true">02</p>
+      <p class="work-meta">SIXT &middot; 2019&ndash;2021</p>
+
+      <h3 class="work-title">A more direct route from here to there.</h3>
+
+      <p class="work-description">
+        I worked as a software development engineer on SIXT ride, a worldwide
+        taxi and limousine service with cashless payment and transparent pricing.
+      </p>
+
+      <ul class="work-tags" aria-label="Areas of focus">
+        <li class="tag">Mobility</li>
+        <li class="tag">Web components</li>
+      </ul>
+      <a class="work-link" href="https://www.sixt.com/ride/">
+        Explore SIXT ride <span aria-hidden="true">&nearr;</span>
+      </a>
+    </article>
+
+    <article class="work-card work-card--uber">
+      <p class="work-index" aria-hidden="true">03</p>
+      <p class="work-meta">Uber &middot; 2017&ndash;2018</p>
+
+      <h3 class="work-title">Bringing Uber Photo across the finish line.</h3>
+
+      <p class="work-description">
+        I took over and completed Uber Photo, an image management tool for
+        Uber&rsquo;s marketing team, as a contractor through Band of Coders.
+      </p>
+
+      <ul class="work-tags" aria-label="Areas of focus">
+        <li class="tag">Asset management</li>
+        <li class="tag">Full-stack engineering</li>
+        <li class="tag">React</li>
+      </ul>
+      <a class="work-link" href="https://www.bandofcoders.com/case-studies/uber">
+        Read the project case study <span aria-hidden="true">&nearr;</span>
+      </a>
+    </article>
+
+    <article class="work-card work-card--att">
+      <p class="work-index" aria-hidden="true">04</p>
+      <p class="work-meta">AT&amp;T &middot; 2017</p>
+
+      <h3 class="work-title">On-demand entertainment, built for the web.</h3>
+
+      <p class="work-description">
+        I worked as a frontend developer at AT&amp;T on U-verse On Demand,
+        a service for watching movies, events, and more.
+      </p>
+
+      <ul class="work-tags" aria-label="Areas of focus">
+        <li class="tag">Entertainment</li>
+        <li class="tag">Frontend engineering</li>
+        <li class="tag">JavaScript</li>
+      </ul>
+      <a class="work-link" href="https://www.directv.com/u-verse/">
+        Explore U-verse TV <span aria-hidden="true">&nearr;</span>
+      </a>
+    </article>
+
+    <article class="work-card work-card--exammed">
+      <p class="work-index" aria-hidden="true">05</p>
+      <p class="work-meta">ExamMed &middot; 2015&ndash;2016</p>
+
+      <h3 class="work-title">Connecting patients with their doctors.</h3>
+
+      <p class="work-description">
+        I worked as a contract frontend engineer at ExamMed, a telehealth
+        platform connecting patients with their doctors through virtual
+        consultations.
+      </p>
+
+      <ul class="work-tags" aria-label="Areas of focus">
+        <li class="tag">Telehealth</li>
+        <li class="tag">Frontend engineering</li>
+      </ul>
+      <a class="work-link" href="https://www.bandofcoders.com/case-studies/exammed">
+        Read the project case study <span aria-hidden="true">&nearr;</span>
+      </a>
+    </article>
+  </div>
+</section>
+
+<section class="about-section" id="about" aria-labelledby="about-title">
+  <div class="about-grid">
+    <div class="about-copy">
+      <p class="section-kicker">About me</p>
+      <h2 class="section-title" id="about-title">
+        A little about how I approach the work.
+      </h2>
+
+      <p>
+        Working across different teams and industries has shaped how I build.
+        I like understanding who a product is for and how its pieces fit
+        together, from the interface to the engineering behind it.
+      </p>
+    </div>
+
+    <ol class="principle-list">
+      <li class="principle">
+        <h3>Start with the person.</h3>
+        <p>
+          I consider accessibility and clarity from the start, so people can
+          understand and use what I build.
+        </p>
       </li>
-    {% endfor %}
-  </ul>
 
-</div>
+      <li class="principle">
+        <h3>Design for the whole experience.</h3>
+        <p>
+          I think about how the interface and the engineering behind it work
+          together, and what those choices mean for the person using it.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="writing-section" id="writing" aria-labelledby="writing-title">
+  <header class="section-heading">
+    <p class="section-kicker">From the archive</p>
+    <h2 class="section-title" id="writing-title">Notes on building for the web.</h2>
+    <p class="section-summary">
+      Practical writing on development, privacy, and the foundations of the web.
+    </p>
+  </header>
+
+  <div class="writing-list">
+    {% assign featured_writing_count = 0 %}
+    {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+
+    {% for post in sorted_posts %}
+      {% if featured_writing_count >= 4 %}
+        {% break %}
+      {% endif %}
+
+      {% unless post.categories contains 'job' or post.categories contains 'social' %}
+        {% if post.categories contains 'cloud' or post.categories contains 'cookies' or post.categories contains 'web' %}
+          <article class="writing-item">
+            <time class="writing-date" datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: '%b %Y' }}
+            </time>
+
+            <h3 class="writing-title">
+              <a class="writing-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+          </article>
+
+          {% assign featured_writing_count = featured_writing_count | plus: 1 %}
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  <p>
+    <a class="writing-link" href="{{ '/writing/' | relative_url }}">
+      More notes <span aria-hidden="true">&rarr;</span>
+    </a>
+  </p>
+</section>
+
+<section class="contact-cta" id="contact" aria-labelledby="contact-title">
+  <div class="contact-copy">
+    <p class="section-kicker">Get in touch</p>
+    <h2 class="section-title" id="contact-title">Good work starts with a conversation.</h2>
+    <p>
+      You can find me in Stockholm, thinking about product quality and enjoying
+      a good fika.
+    </p>
+  </div>
+
+  <div class="contact-links">
+    <a class="button button-primary" href="mailto:{{ site.email | escape }}">Send an email</a>
+    <a class="button button-secondary" href="{{ linkedin_url | escape }}" rel="me">
+      LinkedIn
+    </a>
+
+    {% if site.github_username %}
+      <a class="button button-secondary" href="https://github.com/{{ site.github_username | url_encode }}" rel="me">
+        GitHub
+      </a>
+    {% endif %}
+  </div>
+</section>

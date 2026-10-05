@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   {% include head.html %}
 
-  <body>
-
+  <body class="{% if page.url == '/' %}page-home{% elsif page.layout == 'post' %}page-post{% elsif page.url == '/about/' %}page-about{% else %}page-page{% endif %}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {% include header.html %}
 
-    <div class="page-content">
+    <main class="page-content" id="main-content">
       <div class="wrapper">
         {{ content }}
       </div>
-    </div>
+    </main>
 
     {% include footer.html %}
-
   </body>
-
 </html>

@@ -21,7 +21,7 @@ A banner act as an emerging window that notifies user about cookies usage, compl
 It can also be extended to request for permission, complying with the second point as well.
 On this article, I'll explain how to implement a banner which notifies about cookies usage.
 
-In case you're interested in how to request permission too, head to the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in) article.
+In case you're interested in how to request permission too, head to the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in.html) article.
 
 # Implementation
 Before digging deep, I'd like to mention that if you feel lost at any point of the article,
@@ -86,13 +86,13 @@ At the end of the implementation, the cookie banner should look similar to the n
 Now you can see the cookie banner present letting visitors know the website makes use of cookies.
 
 A better approach would be to let visitors disable cookies on the website.
-I invite you to read the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in) article where you can find this approach's implementation in detail.
+I invite you to read the [How To Opt In Google Analytics](/cookies/2020/09/18/how-to-implement-google-analytics-with-opt-in.html) article where you can find this approach's implementation in detail.
 
 In case you encounter issues, you can take a look at the [implementation](https://github.com/luciomartinez/luciomartinez.github.io/pull/6) done at my blog and use it as a reference.
 
 # Conclusion
 GDPR has been implemented since 2018.
-On its first year, there was a report showing its most important [numbers for 2019](https://ec.europa.eu/info/sites/info/files/infographic-gdpr_in_numbers.pdf).
+On its first year, there was a report showing its most important [numbers for 2019 (PDF)](https://www.nutanix.com/content/dam/nutanix-newsroom/gdpr-year-2/infographic-gdpr-in-numbers.pdf).
 Almost all EU countries adapted their national legislation.
 As the time pass, it becomes more and more important to comply with it.
 Now we can see that is fairly easy to do so.

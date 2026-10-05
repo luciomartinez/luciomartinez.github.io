@@ -5,7 +5,7 @@ date:   2020-09-18 21:34:00 +0200
 categories: cookies
 ---
 # Introduction
-It's very easy to [enable cookie banner](/cookies/2020/09/18/enable-cookie-banner-in-10-minutes) notifying website visitors about cookies usage.
+It's very easy to [enable cookie banner](/cookies/2020/09/18/enable-cookie-banner-in-10-minutes.html) notifying website visitors about cookies usage.
 What if we want to allow visitors to disable cookies?
 Or even better, what if we disable cookies and visitors can opt in?
 Disabling cookies by default is becoming more and more standard.

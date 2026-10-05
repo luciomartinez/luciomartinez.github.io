@@ -3,6 +3,12 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
+  <nav class="post-navigation" aria-label="Article navigation">
+    <a class="writing-link post-back-link" href="{{ '/writing/' | relative_url }}">
+      <span aria-hidden="true">&larr;</span> All notes
+    </a>
+  </nav>
+
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>

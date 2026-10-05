@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How To Start on Web Developement
+title:  How to Get Started in Web Development
 date:   2022-08-29 23:40:30 +0200
 categories: web
 ---

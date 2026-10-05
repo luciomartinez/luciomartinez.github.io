@@ -7,7 +7,7 @@ categories: cloud
 # Deliver a Node.JS App With Firebase
 Since 2017 is possible to deliver a [Node.JS](https://nodejs.org) app using [Firebase](https://firebase.google.com).<sup>[1](#reference1)</sup>
 Google team released a [demonstration](https://youtu.be/LOeioOKUKI8) of two Node.JS endpoints running on the platform.
-Also, there's a [tutorial](https://indepth.dev/building-an-api-with-firebase/) building an API from scratch.
+Also, there's a [tutorial](https://angular.love/building-an-api-with-firebase) building an API from scratch.
 Now, what happens when an already developed Node.JS app needs to be integrated with Firebase? There'll be an issue.
 
 Getting a Node.JS app working on the platform requires a few hours of understanding, debugging and more troubleshooting of the issue.

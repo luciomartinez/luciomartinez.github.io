@@ -1,28 +1,65 @@
-[luciomartinez.github.com](https://luciomartinez.github.io)
-=
+# Lucio Martinez
 
-> The nearest thing to my personal website
+Personal website and writing archive for Lucio Martinez, built with Jekyll and
+published as an open-source static site on GitHub Pages.
 
-## Website
+## Local development
 
-Website built on [GitHub pages](https://pages.github.com/) with [Jekyll](http://jekyllrb.com/).
+The site uses the exact dependencies in `Gemfile.lock`. Docker is the easiest
+way to run its older GitHub Pages toolchain without changing your system Ruby.
 
-## Development
+Install the locked dependencies into a reusable Docker volume:
 
-The project is compatible with GitHub [Codespaces](https://docs.github.com/en/github/developing-online-with-codespaces).
+```sh
+docker run --rm \
+  -e BUNDLE_FROZEN=true \
+  -v "$PWD:/site" \
+  -v luciomartinez-github-pages-bundle:/usr/local/bundle \
+  -w /site \
+  ruby:3.3 \
+  bundle install --jobs 4 --retry 2
+```
 
-Following are a list of helpful commands to remember for development.
+Build the complete site with the same GitHub Pages/Jekyll versions:
 
-### Installing
+```sh
+docker run --rm \
+  -e BUNDLE_FROZEN=true \
+  -v "$PWD:/site" \
+  -v luciomartinez-github-pages-bundle:/usr/local/bundle \
+  -w /site \
+  ruby:3.3 \
+  bundle exec jekyll build
+```
 
-    gem install bundler # requires sudo
-    bundle install # requires sudo
+Start the development server at `http://127.0.0.1:4000`. Jekyll rebuilds when
+source files change, and LiveReload refreshes the browser automatically:
 
-### Serving
+```sh
+docker run --rm \
+  -p 127.0.0.1:4000:4000 \
+  -p 127.0.0.1:35729:35729 \
+  -e BUNDLE_FROZEN=true \
+  -v "$PWD:/site" \
+  -v luciomartinez-github-pages-bundle:/usr/local/bundle \
+  -w /site \
+  ruby:3.3 \
+  bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling
+```
 
-    bundle exec jekyll serve
+Polling lets Jekyll detect changes reliably through the Docker volume. Reload
+an already-open browser tab once to connect it to LiveReload.
 
-### Updating
+If a compatible Ruby and all bundled dependencies are installed directly on
+your machine, the usual Jekyll development server also works:
 
-    gem outdated
-    bundle update # requires sudo
+```sh
+bundle exec jekyll serve --livereload
+```
+
+## Publishing
+
+The repository stays compatible with standard GitHub Pages: the Jekyll source
+lives at the repository root, all pages are static, and no paid hosting service
+or separate deployment platform is required. Review changes locally before
+pushing them to the repository's configured GitHub Pages publishing branch.

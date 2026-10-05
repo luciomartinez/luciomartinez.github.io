@@ -1,29 +1,11 @@
 <footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <p class="footer-copy">© {{ 'now' | date: '%Y' }} {{ site.author }} · Built with care in Stockholm.</p>
 
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
+    <nav class="footer-links" aria-label="Profile and contact links">
+      <a href="mailto:{{ site.email }}">Email</a>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" rel="me">LinkedIn</a>
+      <a href="https://github.com/{{ site.github_username }}" rel="me">GitHub</a>
+    </nav>
   </div>
-
 </footer>
